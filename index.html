@@ -10,28 +10,32 @@
   </head>
 
   <body class="flex flex-col justify-center items-center h-screen bg-white text-black transition-colors duration-500">
-    <h1 class="text-4xl">42</h1>
+    <h1 class="text-4xl md:text-6xl lg:text-8xl">42</h1>
     <button id="theme-toggle" class="absolute top-4 right-4 p-2 bg-transparent border-none cursor-pointer">
       <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-10 h-10 fill-current">
         <path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 14a6 6 0 1 1 0-12 6 6 0 0 1 0 12z" />
       </svg>
     </button>
+    <div class="mt-4 text-center">
+      <p class="text-lg md:text-xl lg:text-2xl">What else are you looking for?</p>
+    </div>
   </body>
 
   <style>
     @font-face {
-        font-family: 'Departure Mono';
-        src: url('./fonts/DepartureMono-Regular.woff2') format('woff2'),
-             url('./fonts/DepartureMono-Regular.woff') format('woff'),
-             url('./fonts/DepartureMono-Regular.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
+      font-family: 'Departure Mono';
+      src: url('./fonts/DepartureMono-Regular.woff2') format('woff2'),
+      url('./fonts/DepartureMono-Regular.woff') format('woff'),
+      url('./fonts/DepartureMono-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
     }
 
     body {
       font-family: 'Departure Mono', monospace;
     }
   </style>
+
 
   <script>
     const button = document.getElementById('theme-toggle');

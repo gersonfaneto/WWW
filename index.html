@@ -6,34 +6,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gersonfaneto.dev</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   </head>
 
-  <body>
-    <h1>42</h1>
+  <body class="flex flex-col justify-center items-center h-screen bg-white text-black transition-colors duration-500">
+    <h1 class="text-4xl">42</h1>
+    <button id="theme-toggle" class="absolute top-4 right-4 p-2 bg-transparent border-none cursor-pointer">
+      <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-10 h-10 fill-current">
+        <path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 14a6 6 0 1 1 0-12 6 6 0 0 1 0 12z" />
+      </svg>
+    </button>
   </body>
 
   <style>
-  body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    transition: background-color 0.5s, color 0.5s;
-  }
-
-  body {
-    background-color: white;
-    color: black;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: black;
-      color: white;
+    @font-face {
+        font-family: 'Departure Mono';
+        src: url('./fonts/DepartureMono-Regular.woff2') format('woff2'),
+             url('./fonts/DepartureMono-Regular.woff') format('woff'),
+             url('./fonts/DepartureMono-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
     }
-  }
+
+    body {
+      font-family: 'Departure Mono', monospace;
+    }
   </style>
+
+  <script>
+    const button = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+
+    // Function to apply the theme based on the user's preference
+    function applyTheme(isDarkTheme) {
+      document.body.classList.toggle('bg-black', isDarkTheme);
+      document.body.classList.toggle('text-white', isDarkTheme);
+      document.body.classList.toggle('bg-white', !isDarkTheme);
+      document.body.classList.toggle('text-black', !isDarkTheme);
+      icon.setAttribute('d', isDarkTheme 
+        ? 'M12 2a10 10 0 0 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z' 
+        : 'M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 14a6 6 0 1 1 0-12 6 6 0 0 1 0 12z');
+      icon.style.fill = isDarkTheme ? 'white' : 'black';
+    }
+
+    // Check the user's preferred color scheme
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    // Apply the initial theme based on the user's preference
+    applyTheme(prefersDarkScheme);
+
+    button.addEventListener('click', () => {
+      const isDarkTheme = document.body.classList.contains('bg-black');
+      applyTheme(!isDarkTheme);
+    });
+  </script>
 
 </html>

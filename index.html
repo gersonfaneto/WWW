@@ -1,128 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>empty</title>
-  </head>
 
-  <body>
-    <button id="theme-toggle">
-      <img id="theme-icon" src="./icons/sun.svg" alt="Theme Icon" />
-    </button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>empty</title>
+</head>
 
-    <main>
-      <h1>42</h1>
-      <p>What else are you looking for?</p>
-    </main>
+<body>
+  <button id="theme-toggle">
+    <img id="theme-icon" src="./icons/sun.svg" alt="Theme Icon" />
+  </button>
 
-    <footer>
-      &copy; <span id="year"></span> Gerson Ferreira. All rights reserved.
-    </footer>
-  </body>
+  <main>
+    <h1>42</h1>
+    <p>What else are you looking for?</p>
+  </main>
 
-  <script>
-    const button = document.getElementById('theme-toggle');
-    const icon = document.getElementById('theme-icon');
+  <footer>
+    &copy; <span id="year"></span> Gerson Ferreira. All rights reserved.
+  </footer>
+</body>
 
-    function applyTheme(isDark) {
-      document.body.classList.toggle('dark-theme', isDark);
-      icon.src = isDark ? './icons/moon.svg' : './icons/sun.svg';
-    }
+<script>
+  const button = document.getElementById('theme-toggle');
+  const icon = document.getElementById('theme-icon');
 
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    applyTheme(prefersDarkScheme);
+  function applyTheme(isDark) {
+    document.body.classList.toggle('dark-theme', isDark);
+    icon.src = isDark ? './icons/moon.svg' : './icons/sun.svg';
+  }
 
-    button.addEventListener('click', () => {
-      icon.classList.add('rotate');
-      setTimeout(() => icon.classList.remove('rotate'), 500);
-      applyTheme(!document.body.classList.contains('dark-theme'));
-    });
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  applyTheme(prefersDarkScheme);
 
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  button.addEventListener('click', () => {
+    icon.classList.add('rotate');
+    setTimeout(() => icon.classList.remove('rotate'), 500);
+    applyTheme(!document.body.classList.contains('dark-theme'));
+  });
 
-  <style>
-    @font-face {
-      font-family: 'Departure Mono';
-      src: url('./fonts/DepartureMono-Regular.woff2') format('woff2'),
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<style>
+  @font-face {
+    font-family: 'Departure Mono';
+    src: url('./fonts/DepartureMono-Regular.woff2') format('woff2'),
       url('./fonts/DepartureMono-Regular.woff') format('woff'),
       url('./fonts/DepartureMono-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
+    font-weight: normal;
+    font-style: normal;
+  }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-    }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
 
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      font-family: 'Departure Mono', monospace;
-      background-color: white;
-      color: black;
-      transition: background-color 0.5s ease, color 0.5s ease;
-    }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Departure Mono', monospace;
+    background-color: white;
+    color: black;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
 
-    #theme-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.5rem;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-    }
+  #theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
 
-    #theme-icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      transition: transform 0.5s ease;
-    }
+  #theme-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: transform 0.5s ease;
+  }
 
-    .rotate {
-      transform: rotate(180deg);
-    }
+  .rotate {
+    transform: rotate(180deg);
+  }
 
-    main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-grow: 1;
-      text-align: center;
-    }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+  }
 
-    h1 {
-      font-size: clamp(2.25rem, 8vw, 6rem);
-      margin: 0;
-    }
+  h1 {
+    font-size: clamp(2.25rem, 8vw, 6rem);
+    margin: 0;
+  }
 
-    p {
-      margin-top: 1rem;
-      font-size: clamp(1.125rem, 2vw, 1.5rem);
-    }
+  p {
+    margin-top: 1rem;
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+  }
 
-    footer {
-      text-align: center;
-      font-size: 0.875rem;
-      color: #6B7280;
-      padding: 1rem 0;
-    }
+  footer {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6B7280;
+    padding: 1rem 0;
+  }
 
-    .dark-theme {
-      background-color: black;
-      color: white;
-    }
+  .dark-theme {
+    background-color: black;
+    color: white;
+  }
 
-    .dark-theme #theme-icon {
-      fill: white;
-    }
-  </style>
+  .dark-theme #theme-icon {
+    fill: white;
+  }
+</style>
+
 </html>

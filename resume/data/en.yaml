@@ -1,0 +1,25 @@
+# @import shared.yaml
+
+bio: >
+  Systems programmer with a long-standing passion for low-level design,
+  operating system development, and unconventional approaches to computing.
+
+education:
+  - period: 2022 – Present
+    title: BSc in Computer Engineering
+    institution: State University of Feira de Santana
+
+projects:
+  - period: 2022 – Present
+    name: Embedded Systems Utilities
+    description: >
+      Developed a series of small utilities and diagnostics tools for embedded
+      system development. 
+
+experience:
+  - period: Freelance
+    title: Independent Systems Programmer
+    employer: Self-employed
+    description: >
+      Built compilers, graphics engines, and operating system components for
+      personal research projects and small contracted tasks.

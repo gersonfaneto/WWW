@@ -1,0 +1,25 @@
+# @import shared.yaml
+
+bio: >
+  Programador de sistemas com uma paixão de longa data por design de baixo nível,
+  desenvolvimento de sistemas operacionais e abordagens não convencionais à computação.
+
+education:
+  - period: 2022 – Presente
+    title: Bacharelado em Engenharia de Computação
+    institution: Universidade Estadual de Feira de Santana
+
+projects:
+  - period: 2022 – Presente
+    name: Utilitários para Sistemas Embarcados
+    description: >
+      Desenvolvi uma série de utilitários e ferramentas de diagnóstico para o
+      desenvolvimento de sistemas embarcados. 
+
+experience:
+  - period: Freelance
+    title: Programador de Sistemas Independente
+    employer: Autônomo
+    description: >
+      Construção de compiladores, motores gráficos e componentes de sistemas operacionais
+      para projetos de pesquisa pessoal e pequenas tarefas contratadas.

@@ -1,0 +1,7 @@
+# Nix
+.direnv/
+
+
+# Project
+build/
+src/*.pdf

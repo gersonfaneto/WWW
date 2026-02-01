@@ -1,20 +1,36 @@
 # @import shared.yaml
 
 bio: >
-  Systems programmer with a long-standing passion for low-level design,
-  operating system development, and unconventional approaches to computing.
+  BSc student in Computer Engineering at UEFS, with a strong background in Linux systems,
+  Free and Open Source Software (FOSS), and a focus on low-level solutions.
 
 education:
   - period: 2022 – Present
     title: BSc in Computer Engineering
-    institution: State University of Feira de Santana
+    institution: State University of Feira de Santana (UEFS)
+
+languages:
+  - name: English
+    level: Advanced (Reading, Writing, Speaking, Listening)
+  - name: Spanish
+    level: Basic (Reasonable Reading and Listening)
+
+certifications:
+  - name: Python Essentials 1 & 2
+    institution: Cisco Networking Academy
+  - name: JavaScript Essentials 1
+    institution: Cisco Networking Academy
+  - name: Multi-application Development with Docker
+    institution: UEFS
+  - name: NDG Linux Essentials & Unhatched
+    institution: Cisco Networking Academy
 
 projects:
-  - period: 2022 – Present
-    name: Embedded Systems Utilities
+  - period: 2025 – Present
+    name: RASM - RISC-V Assembler & Ecosystem
     description: >
-      Developed a series of small utilities and diagnostics tools for embedded
-      system development. 
+      Development of an assembly language and tools for RISC-V architectures, 
+      focusing on low-level software experimentation for robotics.
 
 experience:
   - period: Freelance

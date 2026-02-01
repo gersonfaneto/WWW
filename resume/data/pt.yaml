@@ -1,20 +1,36 @@
 # @import shared.yaml
 
 bio: >
-  Programador de sistemas com uma paixão de longa data por design de baixo nível,
-  desenvolvimento de sistemas operacionais e abordagens não convencionais à computação.
+  Graduando em Engenharia de Computação pela UEFS, com sólida base em sistemas Linux,
+  software livre (FOSS) e foco em soluções de baixo nível.
 
 education:
   - period: 2022 – Presente
     title: Bacharelado em Engenharia de Computação
-    institution: Universidade Estadual de Feira de Santana
+    institution: Universidade Estadual de Feira de Santana (UEFS)
+
+languages:
+  - name: Inglês
+    level: Avançado (Lê, Escreve, Fala e Compreende bem)
+  - name: Espanhol
+    level: Básico (Leitura e Compreensão razoáveis)
+
+certifications:
+  - name: Python Essentials 1 & 2
+    institution: Cisco Networking Academy
+  - name: JavaScript Essentials 1
+    institution: Cisco Networking Academy
+  - name: Desenvolvimento de aplicações com Docker
+    institution: UEFS
+  - name: NDG Linux Essentials & Unhatched
+    institution: Cisco Networking Academy
 
 projects:
-  - period: 2022 – Presente
-    name: Utilitários para Sistemas Embarcados
+  - period: 2025 – Presente
+    name: RASM - RISC-V Assembler & Ecosystem
     description: >
-      Desenvolvi uma série de utilitários e ferramentas de diagnóstico para o
-      desenvolvimento de sistemas embarcados. 
+      Desenvolvimento de uma linguagem assembly e ferramentas para arquiteturas RISC-V,
+      focando em experimentação de software de baixo nível para robótica.
 
 experience:
   - period: Freelance

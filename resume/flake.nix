@@ -21,10 +21,15 @@
 
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
+            # Typst
             typst
             tinymist
             websocat
 
+            # YAML
+            yaml-language-server
+
+            # Fonts
             maple-mono.truetype
           ];
           shellHook =

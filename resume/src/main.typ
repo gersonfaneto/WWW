@@ -27,7 +27,7 @@
 
 #show link: set text(blue.darken(30%))
 
-#set text(font: "Maple Mono")
+#set text(font: "Aporetic Sans")
 #set par(leading: 1em, justify: true)
 
 #show heading.where(level: 1): set block(below: 1em)

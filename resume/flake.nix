@@ -30,6 +30,7 @@
             yaml-language-server
 
             # Fonts
+            aporetic-bin
             maple-mono.truetype
           ];
           shellHook =
